@@ -71,6 +71,33 @@ The sentence-only setting uses one target sentence per example. The `non_figurat
 
 ## Experimental Settings
 
+Both experiments are framed as classification questions. The models are asked to return a JSON object with two fields:
+
+```json
+{
+  "label": "one selected class label",
+  "brief_explanation": "a short reason for the classification"
+}
+```
+
+The answer is counted as correct only when the predicted `label` exactly matches the gold figurative language type. The `brief_explanation` is evaluated separately by a GPT judge, so the project measures both classification accuracy and explanation quality.
+
+The question format differs across the two experiments:
+
+```text
+Experiment 1 question format:
+Premise: ...
+Hypothesis: ...
+NLI label: ...        # only in the with_nli setting
+Choose one label: metaphor, simile, idiom, sarcasm.
+
+Experiment 2 question format:
+Sentence: ...
+Choose one label: metaphor, simile, idiom, sarcasm, non_figurative.
+```
+
+Experiment 1 therefore tests classification under the original FLUTE NLI-style context, while Experiment 2 tests a stricter sentence-only setting.
+
 ### Experiment 1: Original FLUTE-Context Experiment
 
 This experiment tests whether the model benefits from the original FLUTE NLI structure.
