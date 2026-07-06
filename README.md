@@ -167,7 +167,7 @@ Acc@50
 Acc@60
 ```
 
-Explanation quality is evaluated with a GPT judge instead of BLEURT, BERTScore, or human annotation. For each model prediction, the judge receives the original test item, the gold label, the model's predicted label, and the model's `brief_explanation`. It then decides whether the explanation gives a valid reason for the classification.
+Explanation quality is evaluated with a GPT judge instead of BLEURT, BERTScore, or human annotation. In the reported experiments, `gpt-5.5` is used as the judge model for both the FLUTE-context experiment and the sentence-only experiment. For each model prediction, the judge receives the original test item, the gold label, the model's predicted label, and the model's `brief_explanation`. It then decides whether the explanation gives a valid reason for the classification.
 
 The judge uses a three-level rubric:
 
