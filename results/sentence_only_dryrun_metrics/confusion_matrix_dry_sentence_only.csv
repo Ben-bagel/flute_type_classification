@@ -1,0 +1,5 @@
+gold\predicted,metaphor,simile,sarcasm,non_figurative
+metaphor,1,2,0,0
+simile,0,0,0,0
+sarcasm,1,0,0,0
+non_figurative,0,1,0,0

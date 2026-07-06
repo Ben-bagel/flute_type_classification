@@ -1,0 +1,6 @@
+gold\predicted,metaphor,simile,idiom,sarcasm,non_figurative
+metaphor,38,1,5,0,56
+simile,42,56,0,0,2
+idiom,14,2,59,0,25
+sarcasm,2,1,1,10,86
+non_figurative,5,1,1,1,92

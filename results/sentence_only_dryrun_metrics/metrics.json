@@ -1,0 +1,77 @@
+{
+  "dry | sentence_only": {
+    "n": 5,
+    "overall_accuracy": 0.2,
+    "macro_f1": 0.1,
+    "explanation_scoring": "none",
+    "mean_explanation_score": null,
+    "acc_at_50": null,
+    "acc_at_60": null,
+    "per_label": {
+      "metaphor": {
+        "support": 3,
+        "predicted": 2,
+        "accuracy": 0.3333333333333333,
+        "precision": 0.5,
+        "recall": 0.3333333333333333,
+        "f1": 0.4
+      },
+      "simile": {
+        "support": 0,
+        "predicted": 3,
+        "accuracy": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "sarcasm": {
+        "support": 1,
+        "predicted": 0,
+        "accuracy": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "non_figurative": {
+        "support": 1,
+        "predicted": 0,
+        "accuracy": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "confusion_matrix": {
+      "metaphor": {
+        "metaphor": 1,
+        "simile": 2,
+        "sarcasm": 0,
+        "non_figurative": 0
+      },
+      "simile": {
+        "metaphor": 0,
+        "simile": 0,
+        "sarcasm": 0,
+        "non_figurative": 0
+      },
+      "sarcasm": {
+        "metaphor": 1,
+        "simile": 0,
+        "sarcasm": 0,
+        "non_figurative": 0
+      },
+      "non_figurative": {
+        "metaphor": 0,
+        "simile": 1,
+        "sarcasm": 0,
+        "non_figurative": 0
+      }
+    },
+    "labels": [
+      "metaphor",
+      "simile",
+      "sarcasm",
+      "non_figurative"
+    ]
+  }
+}

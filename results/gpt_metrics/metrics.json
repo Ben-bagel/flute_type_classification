@@ -1,0 +1,278 @@
+{
+  "gpt-4.1-nano | with_nli": {
+    "n": 400,
+    "overall_accuracy": 0.7875,
+    "macro_f1": 0.7887333163349215,
+    "explanation_scoring": "judge",
+    "mean_explanation_score": 81.125,
+    "acc_at_50": 0.785,
+    "acc_at_60": 0.6875,
+    "per_label": {
+      "metaphor": {
+        "support": 100,
+        "predicted": 79,
+        "accuracy": 0.57,
+        "precision": 0.7215189873417721,
+        "recall": 0.5876288659793815,
+        "f1": 0.6477272727272727
+      },
+      "simile": {
+        "support": 100,
+        "predicted": 95,
+        "accuracy": 0.84,
+        "precision": 0.8842105263157894,
+        "recall": 0.84,
+        "f1": 0.8615384615384616
+      },
+      "idiom": {
+        "support": 100,
+        "predicted": 112,
+        "accuracy": 0.81,
+        "precision": 0.7232142857142857,
+        "recall": 0.81,
+        "f1": 0.7641509433962265
+      },
+      "sarcasm": {
+        "support": 100,
+        "predicted": 111,
+        "accuracy": 0.93,
+        "precision": 0.8378378378378378,
+        "recall": 0.93,
+        "f1": 0.8815165876777251
+      }
+    },
+    "confusion_matrix": {
+      "metaphor": {
+        "metaphor": 57,
+        "simile": 5,
+        "idiom": 27,
+        "sarcasm": 8
+      },
+      "simile": {
+        "metaphor": 13,
+        "simile": 84,
+        "idiom": 1,
+        "sarcasm": 2
+      },
+      "idiom": {
+        "metaphor": 8,
+        "simile": 3,
+        "idiom": 81,
+        "sarcasm": 8
+      },
+      "sarcasm": {
+        "metaphor": 1,
+        "simile": 3,
+        "idiom": 3,
+        "sarcasm": 93
+      }
+    }
+  },
+  "gpt-4.1-nano | without_nli": {
+    "n": 400,
+    "overall_accuracy": 0.8025,
+    "macro_f1": 0.8002558708926633,
+    "explanation_scoring": "judge",
+    "mean_explanation_score": 82.375,
+    "acc_at_50": 0.8025,
+    "acc_at_60": 0.715,
+    "per_label": {
+      "metaphor": {
+        "support": 100,
+        "predicted": 85,
+        "accuracy": 0.64,
+        "precision": 0.7529411764705882,
+        "recall": 0.64,
+        "f1": 0.6918918918918918
+      },
+      "simile": {
+        "support": 100,
+        "predicted": 95,
+        "accuracy": 0.85,
+        "precision": 0.8947368421052632,
+        "recall": 0.85,
+        "f1": 0.8717948717948718
+      },
+      "idiom": {
+        "support": 100,
+        "predicted": 108,
+        "accuracy": 0.81,
+        "precision": 0.75,
+        "recall": 0.81,
+        "f1": 0.7788461538461539
+      },
+      "sarcasm": {
+        "support": 100,
+        "predicted": 112,
+        "accuracy": 0.91,
+        "precision": 0.8125,
+        "recall": 0.91,
+        "f1": 0.8584905660377358
+      }
+    },
+    "confusion_matrix": {
+      "metaphor": {
+        "metaphor": 64,
+        "simile": 4,
+        "idiom": 22,
+        "sarcasm": 10
+      },
+      "simile": {
+        "metaphor": 12,
+        "simile": 85,
+        "idiom": 1,
+        "sarcasm": 2
+      },
+      "idiom": {
+        "metaphor": 7,
+        "simile": 3,
+        "idiom": 81,
+        "sarcasm": 9
+      },
+      "sarcasm": {
+        "metaphor": 2,
+        "simile": 3,
+        "idiom": 4,
+        "sarcasm": 91
+      }
+    }
+  },
+  "gpt-5.5 | with_nli": {
+    "n": 400,
+    "overall_accuracy": 0.885,
+    "macro_f1": 0.8857203347921767,
+    "explanation_scoring": "judge",
+    "mean_explanation_score": 92.125,
+    "acc_at_50": 0.885,
+    "acc_at_60": 0.8775,
+    "per_label": {
+      "metaphor": {
+        "support": 100,
+        "predicted": 83,
+        "accuracy": 0.78,
+        "precision": 0.9397590361445783,
+        "recall": 0.78,
+        "f1": 0.8524590163934427
+      },
+      "simile": {
+        "support": 100,
+        "predicted": 104,
+        "accuracy": 0.96,
+        "precision": 0.9230769230769231,
+        "recall": 0.96,
+        "f1": 0.9411764705882353
+      },
+      "idiom": {
+        "support": 100,
+        "predicted": 121,
+        "accuracy": 0.92,
+        "precision": 0.7603305785123967,
+        "recall": 0.92,
+        "f1": 0.832579185520362
+      },
+      "sarcasm": {
+        "support": 100,
+        "predicted": 92,
+        "accuracy": 0.88,
+        "precision": 0.9565217391304348,
+        "recall": 0.88,
+        "f1": 0.9166666666666666
+      }
+    },
+    "confusion_matrix": {
+      "metaphor": {
+        "metaphor": 78,
+        "simile": 2,
+        "idiom": 20,
+        "sarcasm": 0
+      },
+      "simile": {
+        "metaphor": 1,
+        "simile": 96,
+        "idiom": 1,
+        "sarcasm": 2
+      },
+      "idiom": {
+        "metaphor": 4,
+        "simile": 2,
+        "idiom": 92,
+        "sarcasm": 2
+      },
+      "sarcasm": {
+        "metaphor": 0,
+        "simile": 4,
+        "idiom": 8,
+        "sarcasm": 88
+      }
+    }
+  },
+  "gpt-5.5 | without_nli": {
+    "n": 400,
+    "overall_accuracy": 0.885,
+    "macro_f1": 0.8841863831214218,
+    "explanation_scoring": "judge",
+    "mean_explanation_score": 92.375,
+    "acc_at_50": 0.885,
+    "acc_at_60": 0.875,
+    "per_label": {
+      "metaphor": {
+        "support": 100,
+        "predicted": 78,
+        "accuracy": 0.75,
+        "precision": 0.9615384615384616,
+        "recall": 0.75,
+        "f1": 0.8426966292134831
+      },
+      "simile": {
+        "support": 100,
+        "predicted": 106,
+        "accuracy": 0.98,
+        "precision": 0.9245283018867925,
+        "recall": 0.98,
+        "f1": 0.9514563106796116
+      },
+      "idiom": {
+        "support": 100,
+        "predicted": 116,
+        "accuracy": 0.91,
+        "precision": 0.7844827586206896,
+        "recall": 0.91,
+        "f1": 0.8425925925925926
+      },
+      "sarcasm": {
+        "support": 100,
+        "predicted": 100,
+        "accuracy": 0.9,
+        "precision": 0.9,
+        "recall": 0.9,
+        "f1": 0.9
+      }
+    },
+    "confusion_matrix": {
+      "metaphor": {
+        "metaphor": 75,
+        "simile": 2,
+        "idiom": 19,
+        "sarcasm": 4
+      },
+      "simile": {
+        "metaphor": 1,
+        "simile": 98,
+        "idiom": 0,
+        "sarcasm": 1
+      },
+      "idiom": {
+        "metaphor": 2,
+        "simile": 2,
+        "idiom": 91,
+        "sarcasm": 5
+      },
+      "sarcasm": {
+        "metaphor": 0,
+        "simile": 4,
+        "idiom": 6,
+        "sarcasm": 90
+      }
+    }
+  }
+}
