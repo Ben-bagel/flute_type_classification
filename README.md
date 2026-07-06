@@ -167,21 +167,27 @@ Acc@50
 Acc@60
 ```
 
-Explanation quality is evaluated with a GPT judge. The judge uses a three-level rubric:
+Explanation quality is evaluated with a GPT judge instead of BLEURT, BERTScore, or human annotation. For each model prediction, the judge receives the original test item, the gold label, the model's predicted label, and the model's `brief_explanation`. It then decides whether the explanation gives a valid reason for the classification.
+
+The judge uses a three-level rubric:
 
 ```text
 0 = incorrect, irrelevant, or missing explanation
-1 = partially correct but vague or incomplete
-2 = correct explanation with a clear figurative-language cue
+1 = partially correct explanation, but vague, incomplete, or only weakly tied to the label
+2 = correct explanation that identifies a clear figurative-language cue and supports the label
 ```
 
-The script maps these scores to a 0-100 scale:
+The raw judge score is therefore `0`, `1`, or `2`. The script maps it to a 0-100 explanation score:
 
 ```text
-0 -> 0
-1 -> 50
-2 -> 100
+judge score 0 -> explanation_score 0
+judge score 1 -> explanation_score 50
+judge score 2 -> explanation_score 100
 ```
+
+The reported **Mean explanation score** is the average of these mapped 0-100 scores over all examples in the same model and setting. For example, a mean explanation score of `84.600` means that, on average, the judge considered the model's explanations to be mostly correct, with some partial or incorrect explanations.
+
+This score evaluates the explanation text, not just the label. A prediction can have a correct label but a weak explanation, or an incorrect label with an explanation that only partially identifies a relevant cue. This is why explanation score is reported separately from classification accuracy.
 
 `Acc@50` and `Acc@60` combine label correctness with explanation quality:
 
